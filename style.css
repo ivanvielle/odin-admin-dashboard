@@ -167,5 +167,22 @@ body {
 #content {
     /* background-color: green; */
     grid-area: 2 / 2 / -1 / -1;
-    padding-top: 24px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 70% 30%);
+}
+
+#content > div {
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+#content > div > p {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.projects-grid-item {
+    display: grid;
+    grid-auto-rows: 1fr;
 }
