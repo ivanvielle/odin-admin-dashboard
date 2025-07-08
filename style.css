@@ -21,8 +21,102 @@ body {
 #header {
     /* background-color: red; */
     grid-area: 1 / 2 / 1 / -1; /* row start / column start / row end / column end */
-    box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.35);
+    box-shadow: -1px 3px 3px rgba(0, 0, 0, 0.35);
     z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(5 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.header-grid-item {
+    padding: 1rem 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#search-bar {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+#notification {
+    grid-area: 1 / 4 / 2 / 6;
+}
+
+#user-profile {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+#actions {
+    grid-area: 2 / 3 / 3 / 6;
+}
+
+#search-bar > button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#search-bar > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: lightgray;
+    font-size: 1rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-picture {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+
+.profile > span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.mdi {
+    font-size: 2rem;
+}
+
+.user-profile-span {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 1rem;
+}
+
+.user-profile-span > span {
+    font-weight: bold;
+}
+
+.user-profile-span > span:nth-child(2) {
+    font-size: 2.3rem;
+}
+
+#actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#actions > button {
+    padding: 1rem;
+    border: none;
+    background-color: #0095fd;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.5rem;
 }
 
 /* Sidebar */
@@ -54,13 +148,13 @@ body {
 .list {
     list-style: none;
     padding: 1rem;
+    display: block;
 }
 
 .link {
     text-decoration: none;
     color: white;
     font-size: 1.8rem;
-    display: flex;
     gap: 1rem;
 }
 
